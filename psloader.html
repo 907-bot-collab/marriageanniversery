@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    
+<title>
+    playstation loader
+</title>
+<style>
+  .ui-loader {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -80px;
+  background-color: rgba( 31, 31, 31, 0.9 );
+  box-shadow: 1px 3px 2px 0 rgba( 0, 0, 0, 0.2 );
+  width: 300px;
+  height: 160px;
+  transition: opacity 0.3s ease-in;
+
+  &.visible {
+      opacity: 1;
+      visibility: visible;
+  }
+
+  .loading {
+      position: relative;
+      padding-left: 125px;
+      margin-top: 35px;
+      width: 52px;
+      height: 50px;
+
+      svg {
+          width: 52px;
+          height: 50px;
+      }
+
+      path {
+          opacity: .2;
+          animation: fade-in-out 0.8s infinite ease-in-out;
+          -webkit-animation: fade-in-out 0.8s infinite ease-in-out;
+
+          &.ps-square { animation-delay: 0; -webkit-animation-delay: 0; }
+          &.ps-triangle  { animation-delay: .2s; -webkit-animation-delay: .2s; }
+          &.ps-x { animation-delay: 0.6s; -webkit-animation-delay: 0.6s; }
+          &.ps-circle { animation-delay: 0.4s; -webkit-animation-delay: 0.4s; }
+      }
+  }
+
+  span {
+      padding-top: 30px;
+      display: block;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 16px;
+  }
+}
+
+
+@keyframes fade-in-out {
+  0%, 80%, 100% {
+      opacity: .2;
+  }
+
+  40% {
+      opacity: 1;
+  }
+  }</style>
+</head>
+<body>
+<div class="ui-loader visible">
+  <div class="loading">
+      <svg>
+          <path class="ps-square" fill="rgb(255,255,255)" fill-rule="evenodd" d="M0.00 0.00 C0.00 0.00 22.00 0.00 22.00 0.00 C22.00 0.00 22.00 22.00 22.00 22.00 C22.00 22.00 0.00 22.00 0.00 22.00 C0.00 22.00 0.00 0.00 0.00 0.00 Z M2.87 19.13 C2.87 19.13 19.13 19.13 19.13 19.13 C19.13 19.13 19.13 2.87 19.13 2.87 C19.13 2.87 2.87 2.87 2.87 2.87 C2.87 2.87 2.87 19.13 2.87 19.13 Z"/>
+          <path class="ps-triangle" fill="rgb(255,255,255)" fill-rule="evenodd" d="M26 22C26 22 38.97 0 38.97 0C38.97 0 52 21.98 52 21.98C52 21.98 26 22 26 22zM30.84 19.24C30.84 19.24 47.1 19.24 47.1 19.24C47.1 19.24 38.97 5.48 38.97 5.48C38.97 5.48 30.84 19.24 30.84 19.24z"/>
+          <path class="ps-x" fill="rgb(255,255,255)" fill-rule="evenodd" d="M20 49C20 49 11.01 40.03 11.01 40.03C11.01 40.03 2.05 49 2.05 49C2.05 49 0.01 46.96 0.01 46.96C0.01 46.96 9 37.99 9 37.99C9 37.99 0.01 29.03 0.01 29.03C0.01 29.03 2.05 26.99 2.05 26.99C2.05 26.99 11.01 35.980000000000004 11.01 35.980000000000004C11.01 35.980000000000004 20 26.99 20 26.99C20 26.99 22.01 29.03 22.01 29.03C22.01 29.03 13.03 37.99 13.03 37.99C13.03 37.99 22.01 47.010000000000005 22.01 47.010000000000005C22.01 47.010000000000005 20 49 20 49z"/>
+          <path class="ps-circle" fill="rgb(255,255,255)" fill-rule="evenodd" d="M38.5 26.99C44.86 26.99 50.010000000000005 32.13 50.010000000000005 38.49C50.010000000000005 44.85 44.86 50 38.5 50C32.14 50 27 44.85 27 38.49C27 32.13 32.14 26.99 38.5 26.99zM38.5 46.96C43.19 46.96 46.97 43.18 46.97 38.49C46.97 33.81 43.19 30.03 38.5 30.03C33.82 30.03 30.04 33.81 30.04 38.49C30.04 43.18 33.82 46.96 38.5 46.96z"/>
+      </svg>
+  </div>
+  <span class="font-bold">Adding post...</span>
+</div>
+    <script>
+        // Redirect to Page 2 after 3 seconds
+          setTimeout(function() {
+              location.href = 'website.html';
+          }, 3000);
+      </script>
+</body>
+</html>
